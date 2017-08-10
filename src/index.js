@@ -1,5 +1,6 @@
 import vis from 'vis'
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import difference from 'lodash/difference'
 import intersection from 'lodash/intersection'
 import each from 'lodash/each'

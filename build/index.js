@@ -14,6 +14,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _difference = require('lodash/difference');
 
 var _difference2 = _interopRequireDefault(_difference);
@@ -53,7 +57,7 @@ var eventPropTypes = {};
 var eventDefaultProps = {};
 
 (0, _each2.default)(events, function (event) {
-  eventPropTypes[event] = _react.PropTypes.func, eventDefaultProps[event + 'Handler'] = noop;
+  eventPropTypes[event] = _propTypes2.default.func, eventDefaultProps[event + 'Handler'] = noop;
 });
 
 var Timeline = function (_Component) {
@@ -200,16 +204,16 @@ exports.default = Timeline;
 
 
 Timeline.propTypes = (0, _assign2.default)({
-  items: _react.PropTypes.array,
-  groups: _react.PropTypes.array,
-  options: _react.PropTypes.object,
-  selection: _react.PropTypes.array,
-  customTimes: _react.PropTypes.shape({
-    datetime: _react.PropTypes.instanceOf(Date),
-    id: _react.PropTypes.string
+  items: _propTypes2.default.array,
+  groups: _propTypes2.default.array,
+  options: _propTypes2.default.object,
+  selection: _propTypes2.default.array,
+  customTimes: _propTypes2.default.shape({
+    datetime: _propTypes2.default.instanceOf(Date),
+    id: _propTypes2.default.string
   }),
-  animate: _react.PropTypes.oneOfType([_react.PropTypes.bool, _react.PropTypes.object]),
-  currentTime: _react.PropTypes.oneOfType([_react.PropTypes.string, _react.PropTypes.instanceOf(Date), _react.PropTypes.number])
+  animate: _propTypes2.default.oneOfType([_propTypes2.default.bool, _propTypes2.default.object]),
+  currentTime: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.instanceOf(Date), _propTypes2.default.number])
 }, eventPropTypes);
 
 Timeline.defaultProps = (0, _assign2.default)({
