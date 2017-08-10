@@ -1,5 +1,4 @@
 import vis from 'vis'
-import 'vis/dist/vis.css'
 import React, { Component, PropTypes } from 'react'
 import difference from 'lodash/difference'
 import intersection from 'lodash/intersection'
